@@ -18,7 +18,7 @@ export CLUSTERID_SUBNET="${CLUSTERID}-subnet"
 # Subnet CIDR, modify if needed
 export CLUSTERID_SUBNET_CIDR="10.240.1.0/24"
 # DNS
-export DNSZONE="${CLUSTERID}-demo10447-rht-labs-xyz"
+export DNSZONE="demo10447-rht-labs-xyz"
 export DOMAIN="${CLUSTERID}.demo10447.rht-labs.xyz."
 export TTL=300
 # RHEL image to be used
