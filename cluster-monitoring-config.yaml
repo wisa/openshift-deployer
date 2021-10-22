@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
+data:
+  config.yaml: |+
+    alertmanagerMain:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    prometheusK8s:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    prometheusOperator:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    grafana:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    k8sPrometheusAdapter:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    kubeStateMetrics:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    telemeterClient:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    openshiftStateMetrics:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
+    thanosQuerier:
+      nodeSelector:
+        node-role.kubernetes.io/infra-logmon: ""
