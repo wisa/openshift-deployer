@@ -1,0 +1,30 @@
+mcp-infra-router.yaml
+--------
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: infra-router
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,infra-router]}
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/infra-router: ""
+      
+      
+      
+      
+mcp-infra-logmon.yaml
+--------
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: infra-logmin
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,infra-logmon]}
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/infra-logmon: ""
