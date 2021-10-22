@@ -20,7 +20,7 @@ mcp-infra-logmon.yaml
 apiVersion: machineconfiguration.openshift.io/v1
 kind: MachineConfigPool
 metadata:
-  name: infra-logmin
+  name: infra-logmon
 spec:
   machineConfigSelector:
     matchExpressions:
